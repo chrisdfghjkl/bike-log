@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+### Research & Planning Log
+#### Sunday, 06/19
+* 12:45: begin set up of proposal template to prioritize MVP items
+* 1:15: complete proposal doc
+* 1:20: research implementing authorization into react app
+* 2:00: found new technology Auth0, possible solution for adding authentication
+* 2:30-5:17: break
+* 5:18: further research into authentication, found Auth0 video explainer
+* 5:40: auth0 looks like viable solution for authentication, saving tutarial below
+* 5:41: researching hooks for use with react
+* 6:00: researching image upload capability
+* 6:10: research Cloudinary for uploading images
+* 6:30: researching mapbox api
+* 7:07: reviewing firebase lessons for use in capstone
+* 8:30: reviewing context api for use in lieu of redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Saturday, 07/02
+* 1:23: checking out video on react using css grid
+* 2:10: watching video on Bulma css framework
+* 3:14: begin first stages of component diagram (remember to upload)
+* 3:52: review redux documentation 
+* 6:02: reach out to 99spokes re: API access
+* 6:05: research create-react-app template options
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### Resources:
+* React.js Auth0 tutorial: https://www.youtube.com/watch?v=MqczHS3Z2bc
+* React Image Upload Made Easy: https://www.youtube.com/watch?v=XeiOnkEI7XI
+* How to Upload Images in ReactJS using Cloudinary Tutorial: https://www.youtube.com/watch?v=Y-VgaRwWS3o
+* mapbox: https://www.mapbox.com/
+* css grig w/ react tutorial: https://www.youtube.com/watch?v=sA_glquejwE&t=30s&ab_channel=ErikThorelli
+* bulma.io tutorial vid: https://www.youtube.com/results?search_query=bulma.io
+* redux docs: https://redux.js.org/usage/
+* create-react-app templates: https://www.npmjs.com/search?q=cra-template-*
