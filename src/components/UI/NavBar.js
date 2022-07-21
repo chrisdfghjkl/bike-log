@@ -1,19 +1,25 @@
 import React from "react";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const NavBar = props => {
 
   return (
-    <nav className='navbar has-shadow is-dark'>
-    <div className='navbar-brand'>
-      <a href='/' className='navbar-item'>Logo Placeholder</a>
-    </div>
-    <div className="navbar-menu" id="nav-links">
-      <div className="navbar-end">
-        {/* <a className="navbar-item">My Account</a> */}
-        <a className="navbar-item">Log In</a>
-      </div>
-    </div>
-  </nav>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Container>
+        <Navbar.Brand href="#home">Logo Placeholder</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+          </Nav>
+          <Nav>
+            <Nav.Link href="#deets">Log In</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
