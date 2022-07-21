@@ -9,7 +9,7 @@ const NavBar = props => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">Logo Placeholder</Navbar.Brand>
+        <Navbar.Brand href="#home">Bike Log</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
