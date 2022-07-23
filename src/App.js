@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "./components/UI/NavBar";
 import { Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 
@@ -11,7 +10,6 @@ import AddBike from "./pages/AddBike";
 function App() {
   return (
     <Switch>
-      {/* <NavBar /> */}
       <Route path='/' exact>
         <Redirect to='/home' />
       </Route>
