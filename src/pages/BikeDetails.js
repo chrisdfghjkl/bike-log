@@ -1,8 +1,14 @@
+import { Fragment } from "react";
+import { useParams } from "react-router-dom";
+
 const BikeDetails = () => {
+  const params = useParams();
+
   return ( 
-    <div>
+    <Fragment>
       <h1>Bike Detail</h1>
-    </div>
+      <p>{params.bikeId}</p>
+    </Fragment>
   )
 };
 
