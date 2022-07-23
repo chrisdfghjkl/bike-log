@@ -16,7 +16,7 @@ const NewLogForm = (props) => {
         <textarea id='log-entry' rows='5' ref={logTextRef}></textarea>
       </div>
       <div className={styles.actions}>
-        <button className='btn'>Add Log Entry</button>
+        <button className='btn btn-warning'>Add Log Entry</button>
       </div>
     </form>
   )
