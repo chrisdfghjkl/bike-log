@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import styles from './Log.module.css';
+import NewLogForm from "./NewLogForm";
 
 
 const Log = () => {
@@ -18,7 +19,7 @@ const Log = () => {
           Add Log Entry
         </button>
       )}
-      {/* {isAddingLogItem && <NewLogForm />} */}
+      {isAddingLogItem && <NewLogForm />}
       <p>Log...</p>
     </section>
   )
