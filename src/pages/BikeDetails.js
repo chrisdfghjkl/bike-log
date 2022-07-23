@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Route } from "react-router-dom";
 
 const BikeDetails = () => {
   const params = useParams();
@@ -8,6 +8,9 @@ const BikeDetails = () => {
     <Fragment>
       <h1>Bike Detail</h1>
       <p>{params.bikeId}</p>
+      <Route path={`/bikes/${params.bikeId}/log`}>
+        
+      </Route>
     </Fragment>
   )
 };
