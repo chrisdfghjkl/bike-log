@@ -2,7 +2,7 @@ import styles from './BikeItem.module.css';
 
 const BikeItem = (props) => {
   return (
-    <li className='styles.item'>
+    <li className={styles.item}>
       <figure>
         <blockquote>
           <p>{props.year} {props.make} {props.model}</p>
