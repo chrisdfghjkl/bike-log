@@ -6,11 +6,7 @@ const SEED_BIKES = [
 ]
 
 const BikeList = () => {
-  return (
-    <div>
-      <h1>My Bikes</h1>
-    </div>
-  )
+  return <AllBikes bikes={SEED_BIKES} />
 };
 
 export default BikeList;
