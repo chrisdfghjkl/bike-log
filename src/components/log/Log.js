@@ -15,7 +15,7 @@ const Log = () => {
     <section className={styles.log}>
       <h2>Log</h2>
       {!isAddingLogItem && (
-        <button className='btn btn-warning' onClick={startAddLogItemHandler}>
+        <button className='btn' onClick={startAddLogItemHandler}>
           Add Log Entry
         </button>
       )}
