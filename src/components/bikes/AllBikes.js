@@ -13,7 +13,7 @@ const AllBikes = (props) => {
             id={bike.id}
             make={bike.make}
             model={bike.model}
-            year={bike.model}
+            year={bike.year}
             style={bike.style}
           />
         ))}
