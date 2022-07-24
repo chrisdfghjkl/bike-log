@@ -21,3 +21,5 @@ const AllBikes = (props) => {
     </Fragment>
   )
 };
+
+export default AllBikes;
