@@ -1,3 +1,4 @@
+import AllBikes from "../components/bikes/AllBikes";
 
 const SEED_BIKES = [
   { id: 'b1', make: 'Poseidon', model: 'Flatbar X', year: '2021', style: 'Gravel' },
