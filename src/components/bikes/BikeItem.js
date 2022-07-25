@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import styles from './BikeItem.module.css';
 
 const BikeItem = (props) => {
@@ -9,9 +11,9 @@ const BikeItem = (props) => {
         </blockquote>
         <figcaption>{props.style}</figcaption>
       </figure>
-      <a className='btn'>
+      <Link to={`/bikes/${props.id}`} className='btn'>
         More Details
-      </a>
+      </Link>
     </li>
   )
 };
