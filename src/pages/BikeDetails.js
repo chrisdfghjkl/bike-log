@@ -14,6 +14,10 @@ const BikeDetails = () => {
 
   const bike = SEED_BIKES.find(bike => bike.id === params.bikeId);
 
+  if (!bike) {
+    return <p>No bike found</p>
+  }
+
   return ( 
     <Fragment>
       <ExpandedBike make={bike.make} model={bike.model} year={bike.year} style={bike.style}/>
