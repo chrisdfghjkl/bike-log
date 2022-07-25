@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { useParams, Route } from "react-router-dom";
 
+import ExpandedBike from "../components/bikes/ExpandedBike";
 import Log from "../components/log/Log";
 
 const SEED_BIKES = [
@@ -15,8 +16,7 @@ const BikeDetails = () => {
 
   return ( 
     <Fragment>
-      <h1>Bike Detail</h1>
-      <p>{params.bikeId}</p>
+      <ExpandedBike make={bike.make} model={bike.model} year={bike.year} style={bike.style}/>
       <Route path={`/bikes/${params.bikeId}/log`}>
         <Log />
       </Route>
