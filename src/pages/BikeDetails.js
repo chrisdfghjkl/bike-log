@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { useParams, Route } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import ExpandedBike from "../components/bikes/ExpandedBike";
 import Log from "../components/log/Log";
@@ -21,9 +21,9 @@ const BikeDetails = () => {
   return ( 
     <Fragment>
       <ExpandedBike make={bike.make} model={bike.model} year={bike.year} style={bike.style}/>
-      <Route path={`/bikes/${params.bikeId}/log`}>
+      {/* <Route path={`/bikes/${params.bikeId}/log`}> */}
         <Log />
-      </Route>
+      {/* </Route> */}
     </Fragment>
   )
 };
