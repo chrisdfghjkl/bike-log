@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #292b2c;
+  border-bottom: 1px solid #d9534f;
 }
 
 .logo {
