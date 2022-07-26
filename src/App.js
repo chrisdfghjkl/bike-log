@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 
@@ -7,6 +6,7 @@ import BikeDetails from "./pages/BikeDetails";
 import BikeList from "./pages/BikeList";
 import AddBike from "./pages/AddBike";
 import Layout from "./components/layout/Layout";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -18,14 +18,17 @@ function App() {
         <Route path='/home'>
           <Home />
         </Route>
+        <Route path='/add-bike'>
+          <AddBike />
+        </Route>
         <Route path='/bikes' exact>
           <BikeList />
         </Route>
         <Route path='/bikes/:bikeId'>
           <BikeDetails />
         </Route>
-        <Route path='/add-bike'>
-          <AddBike />
+        <Route path='*'>
+          <NotFound />
         </Route>
       </Switch>
     </Layout>
