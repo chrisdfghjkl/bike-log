@@ -20,7 +20,7 @@ const BikeDetails = () => {
 
   return ( 
     <Fragment>
-      <ExpandedBike make={bike.make} model={bike.model} year={bike.year} style={bike.style}/>
+      <ExpandedBike make={bike.make} model={bike.model} year={bike.year} style={bike.style} frame={bike.frame}/>
       {/* <Route path={`/bikes/${params.bikeId}/log`}> */}
         <Log />
       {/* </Route> */}
