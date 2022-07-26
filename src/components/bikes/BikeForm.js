@@ -42,22 +42,27 @@ const BikeForm = (props) => {
               <LoadingWheel />
             </div>
           )}
-
-          <div className={styles.control}>
-            <label htmlFor='make'>Make</label>
-            <input type='text' id='make' ref={makeInputRef} />
-          </div>
-          <div className={styles.control}>
-            <label htmlFor='model'>Model</label>
-            <input type='text' id='model' ref={modelInputRef} />
-          </div>
-          <div className={styles.control}>
-            <label htmlFor='year'>Year</label>
-            <input type='text' id='year' ref={yearInputRef} />
-          </div>
-          <div className={styles.control}>
-            <label htmlFor='style'>Style</label>
-            <input type='text' id='model' ref={styleInputRef} />
+          <div className="row">
+            <div className="col s12 m6">
+              <div className={styles.control}>
+                <label htmlFor='make'>Make</label>
+                <input type='text' id='make' ref={makeInputRef} />
+              </div>
+              <div className={styles.control}>
+                <label htmlFor='model'>Model</label>
+                <input type='text' id='model' ref={modelInputRef} />
+              </div>
+            </div>
+            <div className="col s12 m6">
+            <div className={styles.control}>
+              <label htmlFor='year'>Year</label>
+              <input type='text' id='year' ref={yearInputRef} />
+            </div>
+            <div className={styles.control}>
+              <label htmlFor='style'>Style</label>
+              <input type='text' id='model' ref={styleInputRef} />
+            </div>
+            </div>
           </div>
           <div className={styles.actions}>
             <button onClick={formCompleteHandler} className='btn'>Add Bike</button>

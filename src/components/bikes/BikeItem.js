@@ -7,9 +7,9 @@ const BikeItem = (props) => {
     <li className={styles.item}>
       <figure>
         <blockquote>
-          <p>{props.year} {props.make} {props.model}</p>
+          <p>{props.make} {props.model}</p>
         </blockquote>
-        <figcaption>{props.style}</figcaption>
+        <figcaption>{props.year} | {props.style}</figcaption>
       </figure>
       <Link to={`/bikes/${props.id}`} className='btn'>
         More Details

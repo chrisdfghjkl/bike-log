@@ -14,12 +14,9 @@ const Navbar = () => {
               My Bikes
             </NavLink>
           </li>
-          <li>
-            <NavLink to='/add-bike' activeClassName={styles.active}>
-              Add Bike
-            </NavLink>
+          <li className={styles.login}>
+            Log In
           </li>
-          <li>Log In</li>
         </ul>
       </nav>
     </header>

@@ -1,7 +1,8 @@
 .bike {
-  background-color: #162b2b;
-  color: white;
+  background-color: #eee;
+  color: #212929;
   border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 3rem;
   margin: 3rem auto;
   width: 90%;

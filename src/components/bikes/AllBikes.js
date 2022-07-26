@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 import BikeItem from "./BikeItem";
 import styles from "./AllBikes.module.css";
@@ -18,6 +19,9 @@ const AllBikes = (props) => {
           />
         ))}
       </ul>
+      <Link to={`/add-bike`} className='btn centered'>
+        + Add Bike
+      </Link>
     </Fragment>
   )
 };

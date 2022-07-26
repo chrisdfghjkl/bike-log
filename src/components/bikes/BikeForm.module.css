@@ -28,7 +28,7 @@
   padding: 0.35rem;
   border-radius: 4px;
   background-color: #f0f0f0;
-  border: 1px solid #c1d1d1;
+  border: 1px solid #292b2c;
   display: block;
   width: 100%;
   font-size: 1.25rem;
@@ -36,8 +36,8 @@
 
 .control input:focus,
 .control textarea:focus {
-  background-color: #cbf8f8;
-  outline-color: teal;
+  background-color: #eee;
+  outline-color: #d9534f;
 }
 
 .actions {
