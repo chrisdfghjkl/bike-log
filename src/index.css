@@ -54,3 +54,13 @@ body {
   background-color: #292b2c;
   color: #f7f7f7;
 }
+
+.collapsible .content {
+  padding: 6px;
+  background-color: #f7f7f7;
+}
+.collapsible .header {
+  background-color: #f7f7f7;
+  padding: 6px;
+  cursor: pointer;
+}

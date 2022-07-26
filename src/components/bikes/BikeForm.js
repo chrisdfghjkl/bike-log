@@ -1,5 +1,6 @@
 import { useRef, useState, Fragment } from "react";
 import { Prompt } from "react-router-dom";
+import useCollapse from "react-collapsed";
 
 import Card from '../UI/Card';
 import LoadingWheel from '../UI/LoadingWheel';
@@ -12,6 +13,26 @@ const BikeForm = (props) => {
   const modelInputRef = useRef();
   const yearInputRef = useRef();
   const styleInputRef = useRef();
+  const frameInputRef = useRef(); //material
+  const sizeInputRef = useRef(); //drop down
+  const forkInputRef = useRef(); //material
+  const fDerailleurInputRef = useRef();
+  const rDerailleurInputRef = useRef();
+  const barInputRef = useRef();
+  const barGripInputRef = useRef();
+  const shiftersInputRef = useRef();
+  const cassetteInputRef = useRef();
+  const brakesInputRef = useRef();
+  const pedalsInputRef = useRef();
+  const saddleInputRef = useRef();
+  const tiresInputRef = useRef();
+  const wheelsInputRef = useRef();
+  const frontLightInputRef = useRef();
+  const rearLightInputRef = useRef();
+  const fendersInputRef = useRef();
+  const rackInputRef = useRef();
+  const basketInputRef = useRef();
+  const bellInputRef = useRef();
 
   function submitFormHandler(event) {
     event.preventDefault();
@@ -20,8 +41,9 @@ const BikeForm = (props) => {
     const enteredModel = modelInputRef.current.value;
     const enteredYear = yearInputRef.current.value;
     const enteredStyle = styleInputRef.current.value;
+    const enteredFrame = frameInputRef.current.value;
 
-    props.onAddBike({ make: enteredMake, model: enteredModel, year: enteredYear, style: enteredStyle });
+    props.onAddBike({ make: enteredMake, model: enteredModel, year: enteredYear, style: enteredStyle, frame: enteredFrame });
   }
 
   const formCompleteHandler = () => {
@@ -31,6 +53,8 @@ const BikeForm = (props) => {
   const formFocusedHandler = () => {
     setIsFormEnter(true);
   };
+
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
 
   return (
     <Fragment>
@@ -62,6 +86,19 @@ const BikeForm = (props) => {
               <label htmlFor='style'>Style</label>
               <input type='text' id='model' ref={styleInputRef} />
             </div>
+            </div>
+          </div>
+          <div className="collapsible">
+            <div className="header" {...getToggleProps()}>
+              {isExpanded ? 'Advanced [-]' : 'Advanced [+]'}
+            </div>
+            <div {...getCollapseProps()}>
+              <div className="content">
+                <div className={styles.control}>
+                  <label htmlFor="frame">Frame</label>
+                  <input type='text' id='frame' ref={frameInputRef} />
+                </div>
+              </div>
             </div>
           </div>
           <div className={styles.actions}>
