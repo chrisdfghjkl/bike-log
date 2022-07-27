@@ -1,11 +1,29 @@
 import styles from './ExpandedBike.module.css';
+import useCollapse from 'react-collapsed';
 
 const ExpandedBike = (props) => {
+
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+  
   return (
-    <figure className={styles.bike}>
-      <p>{props.make} {props.model}</p>
-      <p>{props.year} | {props.style}</p>
-    </figure>
+    <div className={styles.item}>
+      <figure>
+        <h2>{props.make} {props.model}</h2>
+        <p>{props.year} | {props.style}</p>
+      </figure>
+      <br />
+      <div className="collapsible-specs">
+        <div className="header" {...getToggleProps()}>
+            <p>Test{isExpanded ? 'Full Specs [-]' : 'Full Specs [+]'}</p>
+        </div>
+        <div {...getCollapseProps()}>
+            <div className="content">
+                Now you can see the hidden content. <br/><br/>
+                Click again to hide...
+            </div>
+        </div>
+      </div>
+    </div>
   )
 };
 
