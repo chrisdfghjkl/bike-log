@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import styles from './Log.module.css';
 import NewLogForm from "./NewLogForm";
+import Card from "../UI/Card";
 
 
 const Log = () => {
@@ -12,16 +13,17 @@ const Log = () => {
   };
 
   return (
+    <Card>
     <section className={styles.log}>
-      <h2>Log</h2>
       {!isAddingLogItem && (
-        <button className='btn' onClick={startAddLogItemHandler}>
-          Add Log Entry
-        </button>
+        <div className="btn-group">
+          <button className='btn' onClick={startAddLogItemHandler}>Log Ride</button>
+          <button className='btn' onClick={startAddLogItemHandler}>Log Service</button>
+        </div>
       )}
       {isAddingLogItem && <NewLogForm />}
-      <p>Log...</p>
     </section>
+    </Card>
   )
 };
 
