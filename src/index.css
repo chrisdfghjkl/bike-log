@@ -64,3 +64,13 @@ body {
   padding: 6px;
   cursor: pointer;
 }
+
+.collapsible-specs .content {
+  padding: 6px;
+  background-color: #eee;
+}
+.collapsible-specs .header {
+  background-color: lightgray;
+  padding: 6px;
+  cursor: pointer;
+}
