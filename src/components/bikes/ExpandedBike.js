@@ -14,7 +14,7 @@ const ExpandedBike = (props) => {
       <br />
       <div className="collapsible-specs">
         <div className="header" {...getToggleProps()}>
-            <p>Test{isExpanded ? 'Full Specs [-]' : 'Full Specs [+]'}</p>
+            {isExpanded ? 'Full Specs -' : 'Full Specs +'}
         </div>
         <div {...getCollapseProps()}>
             <div className="content">
