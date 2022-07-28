@@ -126,10 +126,6 @@ const BikeForm = (props) => {
                       <input type='text' id='frame' ref={frameInputRef} />
                     </div>
                     <div className={styles.control}>
-                      <label htmlFor="size">Size</label>
-                      <input type='text' id='size' ref={sizeInputRef} />
-                    </div>
-                    <div className={styles.control}>
                       <label htmlFor="fork">Fork</label>
                       <input type='text' id='fork' ref={forkInputRef} />
                     </div>
@@ -158,19 +154,27 @@ const BikeForm = (props) => {
                       <input type='text' id='cassette' ref={cassetteInputRef} />
                     </div>
                     <div className={styles.control}>
-                      <label htmlFor="crank">Crank</label>
-                      <input type='text' id='crank' ref={crankInputRef} />
+                      <label htmlFor="frontLight">Front Light</label>
+                      <input type='text' id='frontLight' ref={frontLightInputRef} />
                     </div>
                     <div className={styles.control}>
-                      <label htmlFor="chain">Chain</label>
-                      <input type='text' id='chain' ref={chainInputRef} />
+                      <label htmlFor="rearLight">Rear Light</label>
+                      <input type='text' id='rearLight' ref={rearLightInputRef} />
                     </div>
                     <div className={styles.control}>
-                      <label htmlFor="brake">Brakes</label>
-                      <input type='text' id='brakes' ref={brakesInputRef} />
+                      <label htmlFor="bell">Bell</label>
+                      <input type='text' id='bell' ref={bellInputRef} />
+                    </div>
+                    <div className={styles.control}>
+                      <label htmlFor="size">Size</label>
+                      <input type='text' id='size' ref={sizeInputRef} />
                     </div>
                   </div>
                   <div className="col s12 m6">
+                  <div className={styles.control}>
+                      <label htmlFor="brake">Brakes</label>
+                      <input type='text' id='brakes' ref={brakesInputRef} />
+                    </div>
                     <div className={styles.control}>
                       <label htmlFor="levers">Levers</label>
                       <input type='text' id='levers' ref={leversInputRef} />
@@ -192,12 +196,12 @@ const BikeForm = (props) => {
                       <input type='text' id='wheels' ref={wheelsInputRef} />
                     </div>
                     <div className={styles.control}>
-                      <label htmlFor="frontLight">Front Light</label>
-                      <input type='text' id='frontLight' ref={frontLightInputRef} />
+                      <label htmlFor="crank">Crank</label>
+                      <input type='text' id='crank' ref={crankInputRef} />
                     </div>
                     <div className={styles.control}>
-                      <label htmlFor="rearLight">Rear Light</label>
-                      <input type='text' id='rearLight' ref={rearLightInputRef} />
+                      <label htmlFor="chain">Chain</label>
+                      <input type='text' id='chain' ref={chainInputRef} />
                     </div>
                     <div className={styles.control}>
                       <label htmlFor="fenders">Fenders</label>
@@ -210,10 +214,6 @@ const BikeForm = (props) => {
                     <div className={styles.control}>
                       <label htmlFor="basket">Basket</label>
                       <input type='text' id='basket' ref={basketInputRef} />
-                    </div>
-                    <div className={styles.control}>
-                      <label htmlFor="bell">Bell</label>
-                      <input type='text' id='bell' ref={bellInputRef} />
                     </div>
                   </div>
                 </div>
