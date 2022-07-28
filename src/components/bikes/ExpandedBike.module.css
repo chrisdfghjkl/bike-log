@@ -31,3 +31,22 @@
   color: #566d6d;
 }
 
+.table td th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table tr:nth-child(even){background-color: #f2f2f2;}
+
+.table tr:hover {background-color: #ddd;}
+
+.table th {
+  text-align: left;
+  background-color: #212929;
+  color: white;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
