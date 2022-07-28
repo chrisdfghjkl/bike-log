@@ -1,12 +1,39 @@
 import AllBikes from "../components/bikes/AllBikes";
+import LoadingWheel from '../components/UI/LoadingWheel';
+import NoBikes from "../components/bikes/NoBikes";
 
-const SEED_BIKES = [
-  { id: 'b1', make: 'Poseidon', model: 'Flatbar X', year: '2021', style: 'Gravel' },
-  { id: 'b2', make: 'Kona', model: 'Dew Plus', year: '2020', style: 'Commuter' }
-];
+import useHttp from '../hooks/use-http';
+import { getAllBikes } from '../lib/api';
+import { useEffect } from "react";
+
 
 const BikeList = () => {
-  return <AllBikes bikes={SEED_BIKES} />
+  const { sendRequest, status, data: loadedBikes, error } = useHttp(
+    getAllBikes, 
+    true
+    );
+
+    useEffect(() => {
+      sendRequest();
+    }, [sendRequest]);
+
+    if (status === 'pending') {
+      return (
+        <div className="centered">
+          <LoadingWheel />
+        </div>
+      );
+    }
+
+    if (error) {
+      return <p className="centered, focused">{error}</p>
+    }
+
+    if (status === 'completed' && (!loadedBikes || loadedBikes.length === 0)) {
+      return <NoBikes />
+    }
+  
+    return <AllBikes bikes={loadedBikes} />
 };
 
 export default BikeList;
