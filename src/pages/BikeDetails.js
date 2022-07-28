@@ -31,7 +31,7 @@ const BikeDetails = () => {
 
 
   
-  if (!loadedBike.text) {
+  if (!loadedBike.make) {
     return <p>No bike found</p>
   }
 
