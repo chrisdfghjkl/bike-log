@@ -6,7 +6,7 @@ import styles from './Navbar.module.css';
 const Navbar = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>Bike Log</div>
+      <NavLink to='/home' className={styles.logo}>Bike Log</NavLink>
       <nav className={styles.nav}>
         <ul>
           <li>
@@ -14,8 +14,10 @@ const Navbar = () => {
               My Bikes
             </NavLink>
           </li>
-          <li className={styles.login}>
-            Log In
+          <li>
+            <NavLink to='/login' activeClassName={styles.active}>
+              Log In
+            </NavLink>
           </li>
         </ul>
       </nav>

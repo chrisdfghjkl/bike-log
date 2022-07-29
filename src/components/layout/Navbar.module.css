@@ -12,6 +12,12 @@
 .logo {
   font-size: 2rem;
   color: #f7f7f7;
+  text-decoration: none;
+}
+
+.logo:hover,
+.logo:active {
+  color: #d9534f;
 }
 
 .nav ul {
