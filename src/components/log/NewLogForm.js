@@ -23,7 +23,7 @@ const NewLogForm = (props) => {
 
     const enteredText = logTextRef.current.value;
 
-    sendRequest({text: enteredText}, props.bikeId);
+    sendRequest({ logData: {text: enteredText}, bikeId: props.bikeId });
   };
 
   return (
