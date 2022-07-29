@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 import styles from './Log.module.css';
 import NewLogForm from "./NewLogForm";
@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
 import useHttp from "../../hooks/use-http";
 import { getAllLogs } from "../../lib/api";
 import LoadingWheel from "../UI/LoadingWheel";
+import LogList from "./LogList";
 
 const Log = () => {
   const [isAddingLogItem, setIsAddingLogItem] = useState(false);
@@ -25,7 +26,9 @@ const Log = () => {
     setIsAddingLogItem(true);
   };
 
-  const addedLogHandler = () => {};
+  const addedLogHandler = useCallback(() => {
+    sendRequest(bikeId)
+  }, [sendRequest, bikeId]);
 
   let logs;
 
@@ -37,8 +40,14 @@ const Log = () => {
     );
   }
 
-  if (status === 'completed' && loadedLogs) {
-    
+  if (status === 'completed' && (loadedLogs && loadedLogs.length > 0)) {
+    logs = <LogList logs={loadedLogs}/>
+  }
+
+  if (status === 'completed' &&
+    (!loadedLogs || loadedLogs.length === 0)
+  ) {
+    logs = <p className="centered"> No log entries added yet!</p>
   }
 
   return (
@@ -47,7 +56,13 @@ const Log = () => {
       {!isAddingLogItem && (
         <button className='btn' onClick={startAddLogItemHandler}>Log Service</button>
       )}
-      {isAddingLogItem && <NewLogForm bikeId={params.bikeId} onAddedLog={addedLogHandler}/>}
+      {isAddingLogItem && (
+        <NewLogForm 
+          bikeId={params.bikeId} 
+          onAddedLog={addedLogHandler}
+        />
+      )}
+      {logs}
     </section>
     </Card>
   )
