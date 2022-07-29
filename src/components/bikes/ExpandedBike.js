@@ -1,9 +1,40 @@
 import styles from './ExpandedBike.module.css';
 import useCollapse from 'react-collapsed';
+import { Avatar } from '@mui/material';
+import { useState } from 'react';
+import { storage } from '../../firebase'
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 const ExpandedBike = (props) => {
 
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+
+  const [image, setImage] = useState(null);
+  const [url, setUrl] = useState(null);
+
+  const handleImageChange = (e) => {
+    if (e.target.files[0]) {
+      setImage(e.target.files[0]);
+    }
+  };
+
+  const handleSubmit = () => {
+    const imageRef = ref(storage, "image");
+    uploadBytes(imageRef, image)
+      .then(() => {
+        getDownloadURL(imageRef)
+          .then((url) => {
+            setUrl(url);
+          })
+          .catch((error) => {
+            console.log(error.message, "error getting the image url");
+          });
+        setImage(null);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
   
   return (
     <div className={styles.item}>
@@ -11,6 +42,11 @@ const ExpandedBike = (props) => {
         <h2>{props.make} {props.model}</h2>
         <p>{props.year} | {props.style}</p>
       </figure>
+      <div className={styles.img}>
+      <Avatar src={url} sx={{ width: 250, height: 250 }} variant="rounded" />
+      <input type="file" onChange={handleImageChange} />
+      <button onClick={handleSubmit}>Submit</button>
+      </div>
       <br />
       <div className="collapsible-specs">
         <div className="header" {...getToggleProps()}>
