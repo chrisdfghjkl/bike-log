@@ -55,10 +55,10 @@ export async function addBike(bikeData) {
   return null;
 }
 
-export async function addLog(logData, bikeId) {
-  const response = await fetch(`${FIREBASE_DOMAIN}/logs/${bikeId}.json`, {
+export async function addLog(requestData) {
+  const response = await fetch(`${FIREBASE_DOMAIN}/logs/${requestData.bikeId}.json`, {
     method: 'POST',
-    body: JSON.stringify(logData),
+    body: JSON.stringify(requestData.logData),
     headers: {
       'Content-Type': 'application/json',
     },
