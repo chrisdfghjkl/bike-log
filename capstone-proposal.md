@@ -4,13 +4,13 @@
 
 ##### Project's Purpose or Goal: (What will it do for users?):
 
-Allows users to create account and add their bike and individual components. Users can then log any repairs or service, as well as rides. Logging rides will accumulate milage total for that bike. Stretch goals may be to add  map API for logging rides and the ability to upload photos
+Allows users to create account and add their bike and individual components. Users can then log any repairs or service. Stretch goals may be to add  map API for logging rides and the ability to upload photos
 
 
 ##### List the absolute minimum features the project requires to meet this purpose or goal:
 * Allows users to create an account
 * Allows users to add create/add bike(s)
-* Allows users to log service/repairs/updates to bike, as well as rides taken
+* Allows users to log service/repairs/updates to bike
 
 ##### What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
 * HTML
