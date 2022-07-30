@@ -38,9 +38,7 @@ const BikeDetails = () => {
   return ( 
     <Fragment>
       <ExpandedBike make={loadedBike.make} model={loadedBike.model} year={loadedBike.year} style={loadedBike.style} frame={loadedBike.frame} size={loadedBike.size} fork={loadedBike.fork} fDerailleur={loadedBike.fDerailleur} rDerailleur={loadedBike.rDerailleur} bar={loadedBike.bar} barGrip={loadedBike.barGrip} shifters={loadedBike.shifters} cassette={loadedBike.cassette} chain={loadedBike.chain} crank={loadedBike.crank} brakes={loadedBike.brakes} levers={loadedBike.levers} pedals={loadedBike.pedals} saddle={loadedBike.saddle} tires={loadedBike.tires} wheels={loadedBike.wheels} frontLight={loadedBike.frontLight} rearLight={loadedBike.rearLight} fenders={loadedBike.fenders} rack={loadedBike.rack} basket={loadedBike.basket} bell={loadedBike.bell} />
-      {/* <Route path={`/bikes/${params.bikeId}/log`}> */}
         <Log />
-      {/* </Route> */}
     </Fragment>
   )
 };

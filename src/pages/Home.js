@@ -1,8 +1,8 @@
+import RideCard from "../components/rides/RideCard";
+
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <RideCard />
   )
 };
 

@@ -7,6 +7,7 @@ import LoadingWheel from "../UI/LoadingWheel"
 
 const NewLogForm = (props) => {
   const logTextRef = useRef();
+  const logDateRef = useRef();
 
   const { sendRequest, status, error } = useHttp(addLog);
 
@@ -22,8 +23,9 @@ const NewLogForm = (props) => {
     event.preventDefault();
 
     const enteredText = logTextRef.current.value;
+    const enteredDate = logDateRef.current.value;
 
-    sendRequest({ logData: {text: enteredText}, bikeId: props.bikeId });
+    sendRequest({ logData: {text: enteredText, date: enteredDate}, bikeId: props.bikeId });
   };
 
   return (
@@ -34,7 +36,10 @@ const NewLogForm = (props) => {
         </div>
       )}
       <div className={styles.control} onSubmit={submitFormHandler}>
-        <textarea id='log-entry' rows='5' ref={logTextRef}></textarea>
+        <label htmlFor="log-date">Date:</label>
+        <input type='text' id="log-date" placeholder="MM/DD/YYYY" ref={logDateRef} />
+        <label htmlFor="log-entry">Log Update:</label>
+        <textarea id='log-entry' rows='3' ref={logTextRef}></textarea>
       </div>
       <div className={styles.actions}>
         <button className='btn'>Submit Log Entry</button>

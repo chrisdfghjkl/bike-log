@@ -5,7 +5,7 @@ const LogList = (props) => {
   return (
     <ul className={styles.logs}>
       {props.logs.map((log) => (
-        <LogItem key={log.id} text={log.text} />
+        <LogItem key={log.id} text={log.text} date={log.date} />
       ))}
     </ul>
   );
