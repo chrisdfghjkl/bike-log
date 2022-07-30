@@ -43,9 +43,13 @@ const ExpandedBike = (props) => {
         <p>{props.year} | {props.style}</p>
       </figure>
       <div className={styles.img}>
-      <Avatar src={url} sx={{ width: 250, height: 250 }} variant="rounded" />
+      <div className={styles.avi}>
+        <Avatar src={url} sx={{ width: 300, height: 300 }} variant="rounded" />
+      </div>
       <input type="file" onChange={handleImageChange} />
-      <button onClick={handleSubmit}>Submit</button>
+      <div>
+        <button className='btn' onClick={handleSubmit}>Submit</button>
+      </div>
       </div>
       <br />
       <div className="collapsible-specs">
