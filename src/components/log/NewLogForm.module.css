@@ -1,7 +1,6 @@
 .form {
   margin-top: 1rem;
   position: relative;
-  text-align: center;
 }
 
 .loading {
@@ -19,9 +18,8 @@
 }
 
 .control label {
-  font-weight: bold;
   display: block;
-  margin-bottom: 0.5rem;
+  text-align: left;
 }
 
 .control textarea {
@@ -32,10 +30,23 @@
   border: 1px solid #c1d1d1;
   display: block;
   width: 100%;
-  font-size: 1.25rem;
+  margin-bottom: 10px;
 }
 
 .control textarea:focus {
+  background-color: #eee;
+  outline-color: #d9534f;
+}
+
+.control input {
+  border-radius: 4px;
+  display: block;
+  background-color: #f0f0f0;
+  border: 1px solid #c1d1d1;
+  margin-bottom: 10px;
+}
+
+.control input:focus {
   background-color: #eee;
   outline-color: #d9534f;
 }
