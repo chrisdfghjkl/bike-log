@@ -4,7 +4,7 @@ const LogItem = (props) => {
   return (
     <div className={styles.logcard}>
       <li className={styles.item}>
-        <p>{props.text}</p>
+        <p><span className={styles.date}>[{props.date}]</span> {props.text}</p>
       </li>
     </div>
   );
