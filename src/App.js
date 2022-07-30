@@ -7,6 +7,7 @@ import BikeList from "./pages/BikeList";
 import AddBike from "./pages/AddBike";
 import Layout from "./components/layout/Layout";
 import NotFound from "./pages/NotFound";
+import LogIn from './pages/LogIn';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path='/home'>
           <Home />
+        </Route>
+        <Route path='/login'>
+          <LogIn />
         </Route>
         <Route path='/add-bike'>
           <AddBike />
