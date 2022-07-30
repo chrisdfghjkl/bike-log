@@ -7,6 +7,7 @@
   border-radius: 3%;
   text-align: center;
   padding: 5px;
+  border: 2px solid #d9534f;
 }
 
 .card:hover {

@@ -1,0 +1,39 @@
+
+.container {
+  padding: 16px;
+  border: 2px solid #d9534f;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  padding: 25px;
+}
+
+.container input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.container button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.container button:hover {
+  opacity: 0.8;
+}
+
+.container p {
+  color: #0275d8;
+  text-decoration: underline;
+  font-size: smaller;
+  float: right;
+}
+
