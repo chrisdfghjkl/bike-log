@@ -13,9 +13,9 @@ const BikeForm = (props) => {
   const modelInputRef = useRef();
   const yearInputRef = useRef();
   const styleInputRef = useRef();
-  const frameInputRef = useRef(); //material
-  const sizeInputRef = useRef(); //drop down
-  const forkInputRef = useRef(); //material
+  const frameInputRef = useRef(); 
+  const sizeInputRef = useRef();
+  const forkInputRef = useRef();
   const fDerailleurInputRef = useRef();
   const rDerailleurInputRef = useRef();
   const barInputRef = useRef();
@@ -95,7 +95,7 @@ const BikeForm = (props) => {
             <div className="col s12 m6">
               <div className={styles.control}>
                 <label htmlFor='make'>Make</label>
-                <input type='text' id='make' ref={makeInputRef} />
+                <input type='text' id='make' ref={makeInputRef} required/>
               </div>
               <div className={styles.control}>
                 <label htmlFor='model'>Model</label>
