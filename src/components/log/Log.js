@@ -54,7 +54,7 @@ const Log = () => {
     <Card>
     <section className={styles.log}>
       {!isAddingLogItem && (
-        <button className='btn' onClick={startAddLogItemHandler}>Log Service</button>
+        <button className='btn' onClick={startAddLogItemHandler}>Add Log Entry</button>
       )}
       {isAddingLogItem && (
         <NewLogForm 
